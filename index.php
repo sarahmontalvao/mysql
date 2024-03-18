@@ -12,6 +12,7 @@
     $arrayCorrespondente = $resultadosPg[$indice];
     
 }
+
 ?>
 
 
@@ -21,9 +22,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
+    <style>
+        #segundo,  #terceiro,  #quarto,  #quinto {
+            display: none;
+        }
+    </style>
 </head>
 <body>
+   
+        <button onclick="mostrarConteudo('primeiro')">Mostrar Primeiro</button>
+        <button onclick="mostrarConteudo('segundo')">Mostrar Segundo</button>
+        <button onclick="mostrarConteudo('terceiro')">Mostrar Terceiro</button>
+        <button onclick="mostrarConteudo('quarto')">Mostrar Quarto</button>
+        <button onclick="mostrarConteudo('quinto')">Mostrar Quinto</button>
+
+    <div id="primeiro"  class="conteudo">
     <h2>INDEX</h2>
+
+    
     <table>
 
     <?php
@@ -56,7 +72,51 @@ if(isset($arrayCorrespondente)) {
         ?>
     </div>
      
+    </div>
 
+    <div id="segundo"  class="conteudo">
+        <h2>SEGUNDA PAGINA</h2>
+
+        <p>CONTEUDO DA SEGUNDA PÁGINA</p>
+
+    </div>
+
+    <div id="terceiro"  class="conteudo">
+        <h2>terceiro PAGINA</h2>
+
+        <p>CONTEUDO DA terceiro PÁGINA</p>
+
+    </div>
+
+    <div id="quarto"  class="conteudo">
+        <h2>quarto PAGINA</h2>
+
+        <p>CONTEUDO DA quarto PÁGINA</p>
+
+    </div>
+
+    <div id="quinto"  class="conteudo">
+        <h2>quinto PAGINA</h2>
+
+        <p>CONTEUDO DA quinto PÁGINA</p>
+
+    </div>
+    
+    
+    
+   
+    <script>
+    function mostrarConteudo(id) {
+        var conteudos = document.getElementsByClassName("conteudo");
+        for (var i = 0; i < conteudos.length; i++) {
+            if (conteudos[i].id === id) {
+                conteudos[i].style.display = "block";
+            } else {
+                conteudos[i].style.display = "none";
+            }
+        }
+    }
+</script>
     
 </body>
 </html>
