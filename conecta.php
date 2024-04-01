@@ -8,8 +8,6 @@ $conn = new mysqli ($host,$user,$password,$db);
 
 if ($conn->connect_error) {
     die("Erro na conexão: " . $conn->connect_error);
-}else{
-    echo 'conexão bem executada';
 }
 
 $alunosQuery = 'select * FROM filmes ';
@@ -22,6 +20,8 @@ if ($result) {
     } 
      session_start();
     $_SESSION['resultado'] = $resultado;
+    echo'conexão executada';
+    
 } else {
     echo "Erro ao executar a consulta: " . $conn->error;
 }

@@ -1,0 +1,123 @@
+/* Estilos do botão do menu */
+.dropbtn {
+    background-color: #194c8f;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    min-width: 160px;
+}
+
+/* Estilos do dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px; /* Adiciona um espaçamento entre os dropdowns */
+}
+
+/* Estilos do título do dropdown */
+.dropdown h2 {
+    display: inline-block;
+    margin: 0;
+    margin-right: 10px; /* Adiciona um espaçamento entre o título e o botão */
+    color: #194c8f; /* Cor do texto do título */
+}
+
+/* Estilos do conteúdo do dropdown (oculto por padrão) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    top: 50px; /* Distância entre o conteúdo do dropdown e o botão */
+    right: 0; /* Alinha o conteúdo do dropdown com o botão */
+}
+
+/* Estilos dos links no dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+    background-color: #a2b2ca;
+}
+
+/* Mudança de cor do link quando passa o mouse */
+.dropdown-content a:hover {
+    background-color: #8096c0;
+}
+
+/* Mostra o dropdown quando o mouse passa sobre o botão */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Altera o estilo do botão quando o dropdown está visível */
+.dropdown:hover .dropbtn {
+    background-color: #05005b;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  th {
+    background-color: #194c8f;
+    color: white;
+  }
+
+  /* Estilos do link */
+  a {
+    text-decoration: none;
+    color: #194c8f;
+  }
+
+  /* Estilos do link quando passa o mouse */
+  a:hover {
+    text-decoration: underline;
+  }
+
+  input[type="search"] {
+    padding: 10px;
+    width: calc(100% - 120px); /* Ajuste conforme necessário */
+    border: 2px solid #ccc;
+    border-radius: 5px 0 0 5px; /* Cantos arredondados apenas no lado esquerdo */
+    outline: none;
+    font-size: 16px;
+}
+
+/* Estilo para o botão */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 5px 5px 0; /* Cantos arredondados apenas no lado direito */
+    background-color: #194c8f;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Estilo para quando o botão está passando o mouse */
+button:hover {
+    background-color: #05005b;
+}
+
+/* Estilos adicionais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}

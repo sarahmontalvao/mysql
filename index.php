@@ -1,8 +1,12 @@
 <?php
+include_once('menu.php');
+
+
   session_start();
   //dados para mudança de paginas
   if(isset ($_SESSION['resultado'])){
   $resultadosPg = array_chunk($_SESSION['resultado'], 4);
+ 
   }
 
   //recuperação de pagina clicada e exibição de dados
@@ -12,6 +16,8 @@
     $arrayCorrespondente = $resultadosPg[$indice];
     
 }
+
+
 
 ?>
 
@@ -27,6 +33,7 @@
             display: none;
         }
     </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
    
@@ -37,6 +44,16 @@
         <button onclick="mostrarConteudo('quinto')">Mostrar Quinto</button>
 
     <div id="primeiro"  class="conteudo">
+
+
+    <div class="container">
+    <form action="sua_pagina.php" method="GET"> <!-- Substitua sua_pagina.php pela URL real -->
+        <input type="search" name="pesquisa" placeholder="Pesquisar...">
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
+
     <h2>INDEX</h2>
 
     
@@ -68,6 +85,8 @@ if(isset($arrayCorrespondente)) {
                 echo '</form>';
                
             }
+        }else {
+            echo 'nada';
         }
         ?>
     </div>
